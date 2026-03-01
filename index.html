@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>icoNic</title>
+
+<style>
+@font-face {
+    font-family: "site-main";
+    src: url("font-main.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "site-alt";
+    src: url("font-alt.woff2") format("woff2");
+    font-display: swap;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #ffffff;
+    font-family: "site-alt", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.bg-grid {
+    position: fixed;
+    inset: 0;
+    background-image: url("background.png");
+    background-repeat: repeat;
+    background-size: auto;
+    z-index: -2;
+}
+
+.bg-overlay {
+    position: fixed;
+    inset: -200%;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255,255,255,0.08) 0px,
+        rgba(255,255,255,0.08) 220px,
+        rgba(255,255,255,0.02) 220px,
+        rgba(255,255,255,0.02) 440px
+    );
+    animation: drift 70s linear infinite;
+    z-index: -1;
+}
+
+@keyframes drift {
+    from { transform: translate(-20%, -20%); }
+    to { transform: translate(20%, 20%); }
+}
+
+.topbar {
+    width: calc(100% - 80px);
+    margin: 28px auto;
+    padding: 18px;
+    text-align: center;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #6f8ed6, #0c36c9);
+    color: #e9e1b8;
+    font-size: 28px;
+    letter-spacing: 2px;
+    box-shadow: 0 8px 0 rgba(0,0,0,.15);
+    font-family: "site-main", cursive;
+}
+
+.container {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 10px;
+    font-size: 72px;
+    color: #f2dc64;
+    font-family: "site-main", cursive;
+    letter-spacing: 2px;
+    text-shadow:
+        4px 4px 0 #000,
+        8px 8px 0 rgba(0,0,0,.18);
+}
+
+.email {
+    margin-bottom: 28px;
+    color: #f2dc64;
+    font-size: 22px;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000;
+}
+
+.button {
+    display: block;
+    margin: 20px auto;
+    padding: 18px;
+    width: 340px;
+    border-radius: 19px;
+    background: #000;
+    color: #f1ecd0;
+    text-decoration: none;
+    font-size: 26px;
+    font-family: "site-main", cursive;
+    letter-spacing: 2px;
+    box-shadow: 0 6px 0 rgba(0,0,0,.25);
+    transition: transform .12s ease;
+}
+
+.button:hover {
+    transform: translateY(2px);
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-overlay"></div>
+
+<div class="topbar">WINDOWS_XP</div>
+
+<div class="container">
+<div class="card">
+
+<h1>icoNic</h1>
+
+<div class="email">
+<a href="mailto:iconic.musiccc@gmail.com" style="color:inherit;text-decoration:none;">
+iconic.musiccc@gmail.com
+</a>
+</div>
+
+<a class="button" href="https://iconic.printful.me/" target="_blank">BUY MERCH</a>
+<a class="button" href="https://elasticstage.com/iloveiconicmusic" target="_blank">BUY VINYL</a>
+<a class="button" href="https://open.spotify.com/artist/5FacPXA4MMbZWd8dTCZuTU" target="_blank">SPOTIFY</a>
+<a class="button" href="https://soundcloud.com/iconic-musiccc" target="_blank">SOUNDCLOUD</a>
+<a class="button" href="https://www.instagram.com/funkywhiteboyiconic/" target="_blank">INSTAGRAM</a>
+<a class="button" href="https://x.com/icoNic_musicc" target="_blank">X</a>
+<a class="button" href="https://www.youtube.com/@icoNic_musiccc" target="_blank">YOUTUBE</a>
+
+</div>
+</div>
+
+</body>
+</html>
